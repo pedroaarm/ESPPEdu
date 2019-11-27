@@ -31,6 +31,13 @@
 
     {% block script %}{% endblock  %}
 
+    <style type="text/css">
+        .mycontainer{
+            display: flex;
+            margin:5px;
+        }
+        </style>
+
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -60,7 +67,8 @@
                     {% comment "" %}
                     <li><a href="{% url 'website:standards' %}">Normas</a></li>
                     {% endcomment %}
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#help-page">Ajuda</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#contact-page">Contato</a></li>
                     <li><a href="{% url 'accounts:login' %}">Login</a></li>
                 </ul>
@@ -89,6 +97,81 @@
     {% block body %}
 
     {% endblock %}
+
+    <footer class="footer-area relative sky-bg" id="help-page">
+        <div class="absolute footer-bg"></div>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+                        <div class="page-title">
+                            <h2>Ajuda</h2>
+                            
+                            
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <container class="mycontainer">
+                <span> 
+             <img width="40" height="120" src="{% static 'img\user.png' %}" alt="">
+             </span>
+            
+             <span><h4><strong>Criar Conta</strong></h4> Para criar uma nova conta, o usuário deverá acessar a página de <a href="{% url 'accounts:login' %}">Login</a>, clicar em "Cadastre-se" e preencher todos os dados solicitados pelo sistema. Vale lembrar que a senha dever ter no minimo 8 caracteres e ser "forte", ou seja, possuir letras, numeros e caracteres especiais. </span>
+            </container>
+            <container class="mycontainer">
+                <span> 
+             <img width="40"  height="120" src="{% static 'img\key.png' %}" alt="">
+             </span>
+             <span><h4><strong>Recuperar Senha</strong></h4> Caso você tenha perdido sua senha de acesso, você poderá recupera-la acessando a página de <a href="{% url 'accounts:login' %}">Login</a>, clicar em "Recuperar Senha", digitar o email de cadastrado e clicar no botão "enviar". Uma mensagem de recuperação de senha chegará no seu e-mail. </span>
+            </container>
+
+            <container class="mycontainer">
+                <span> 
+                    
+             <img  width="50"  height="120" src="{% static 'img\resetkey.png' %}" alt="" >
+             </span>
+             <span><h4><strong>Alterar senha</strong></h4> Com o login feito, você verá no dashboard no canto superior direito um ícone co sua foto, ao clicar nela, aparecerá algumas opções, dentre elas a opção de "Recuperar senha", ao clicar nessa opção você será redirecionado, nessa página pedirá para você colocar a senha atual e colocar a nova senha. Após preencher os dados corretamente, bastará clicar no botão "Enviar". </span>
+            
+
+
+            </container>
+            
+            <container class="mycontainer">
+                <span> 
+             <img width="40" height="120" src="{% static 'img\article.png' %}" alt="">
+             </span>
+            
+             <span><h4><strong>Submissão de Trabalhos</strong></h4> Com a conta criada, usuario deverá realizar o <a href="{% url 'accounts:login' %}">Login</a> no sistema, selecionar Nova Submissão, preencher os campos necessários e enviar para a valiação. Você poderá ver o status do artigo atividades -> Avaliações. </span>
+            </container>
+
+        </div>
+
+
+
+
+        <footer class="footer-area relative sky-bg" id="help-page">
+                <div class="absolute footer-bg"></div>
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+                                <div class="page-title">
+                                    <h2>Sobre</h2>
+                                    <p align="justify"> A produção bibliográfica é o principal fator de produção acadêmica na atualidade. O artigo tem sido alçado a um patamar elevado de grande destaque nessa produção, em função do seu peso no currículo. 
+                                    </p> <p align="justify">Setor parcialmente explorado no campo de pesquisa da comunicação, a revista se dirige a um público específico, destacando-se pelas estratégias visuais, pela segmentação temática e a periodicidade não atrelada à urgência informativa, o que permite a instauração de práticas profissionais e de relação com seu público bastante peculiares.</p>
+                                    <p align="justify">Observando este contexto, o ESPPEdu se trata de um sistema para submissão e avaliação de artigos desenvolvido por alunos da Universidade Federal do Piaui - CSHNB. </p>
+                                    
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+        
+                </div>
+        
 
     <footer class="footer-area relative sky-bg" id="contact-page">
         <div class="absolute footer-bg"></div>
